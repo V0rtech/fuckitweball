@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$FUCKIT - Fuck It We Ball</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Captcha Overlay -->
+    <div class="captcha-overlay" id="captchaOverlay">
+        <div class="captcha-container">
+            <div class="captcha-question">We ball?</div>
+            
+            <div class="captcha-checkbox-container" onclick="toggleCaptcha()">
+                <div class="captcha-checkbox" id="captchaCheckbox">
+                    <span class="checkmark">✓</span>
+                </div>
+                <label class="captcha-label">FUCK IT</label>
+            </div>
+            
+            <div class="captcha-status" id="captchaStatus"></div>
+            <button class="captcha-enter-btn" id="enterBtn" onclick="enterSite()">ENTER SITE</button>
+        </div>
+    </div>
+
+    <!-- Main Website Content -->
+    <div class="main-content" id="mainContent">
+        <!-- Audio elements for music -->
+        <audio id="audioPlayer" loop>
+            <source src="" type="audio/mpeg">
+        </audio>
+
+        <header>
+            <nav>
+                <div class="logo">
+                    <img src="images/token-icon.png" alt="FUCKIT Token" id="tokenIcon">
+                    <h1>$FUCKIT</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#community">Community</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Music Controls -->
+        <div class="music-controls">
+            <div class="music-title" id="currentSong">No song loaded</div>
+            <div class="music-buttons">
+                <button class="music-btn" onclick="togglePlay()" id="playBtn">Play</button>
+                <button class="music-btn" onclick="previousSong()">Previous</button>
+                <button class="music-btn" onclick="nextSong()">Next</button>
+            </div>
+            <div class="volume-control">
+                <span style="font-size: 0.8rem;">Volume:</span>
+                <input type="range" class="volume-slider" min="0" max="100" value="50" id="volumeSlider">
+            </div>
+        </div>
+
+        <main>
+            <!-- Hero Section -->
+            <section id="home" class="hero">
+                <div class="container">
+                    <div class="hero-content floating">
+                        <h1>FUCK IT WE BALL</h1>
+                        <p class="subtitle">$FUCKIT</p>
+                        <p class="description">
+                            When life hits hard, we don't fold - we ball harder. $FUCKIT, no bitching, just balling.
+                        </p>
+                        <div class="cta-buttons">
+                            <a href="https://YOUR_BUY_LINK_HERE" target="_blank" class="btn btn-primary glow">
+                                Buy $FUCKIT
+                            </a>
+                        </div>
+                        <div class="contract-address" style="margin-top: 1rem; text-align: center;">
+                            <span id="contractText" style="font-size: 0.9rem; color: rgba(255,255,255,0.8); user-select: all;">
+                                CA: Coming soon
+                            </span>
+                            <button onclick="copyContract()" style="
+                                margin-left: 0.5rem;
+                                padding: 0.2rem 0.5rem;
+                                font-size: 0.8rem;
+                                cursor: pointer;
+                                border: none;
+                                border-radius: 5px;
+                                background: linear-gradient(45deg, #ffffff, #cccccc);
+                                color: #000;
+                            ">
+                                Copy
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Token Info Section -->
+            <section id="about" class="token-info">
+                <div class="container">
+                    <div class="info-grid">
+                        <div class="info-card">
+                            <h3>The Philosophy</h3>
+                            <p>
+                                "Fuck It We Ball" isn't just a meme - it's a mindset. When everything goes wrong, 
+                                when the market crashes, when life gets tough, true ballers don't panic. We adapt, 
+                                we overcome, and we ball even harder.
+                            </p>
+                        </div>
+                        <div class="info-card">
+                            <h3>Community Driven</h3>
+                            <p>
+                                Built by ballers, for ballers. $FUCKIT isn't just a shitty token - it's a symbol of 
+                                collective ballness. Every holder is part of the movement that refuses to stop balling.
+                            </p>
+                        </div>
+                        <div class="info-card">
+                            <h3>Baller ass Energy</h3>
+                            <p>
+                                Through every pump, every dip, every market cycle - we say fuck it and we ball.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="token-stats" id="tokenomics">
+                        <div class="stat-item">
+                            <div class="stat-value">1B</div>
+                            <div class="stat-label">Total Supply</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">0%</div>
+                            <div class="stat-label">Tax</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">100%</div>
+                            <div class="stat-label">Fuck It We Ball</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">∞</div>
+                            <div class="stat-label">Ball Energy</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer id="community">
+            <div class="container">
+                <div class="social-links">
+                    <a href="https://x.com/i/communities/1955719103731102152" title="Twitter" target="_blank">
+                        <img src="images/twitter.png" alt="Twitter">
+                    </a>
+                    <a href="https://pump.fun/YourToken" title="Pumpfun" target="_blank">
+                        <img src="images/pumpfun.png" alt="Pumpfun">
+                    </a>
+                </div>
+                <div class="copyright">
+                    <p>© 2025 $FUCKIT - Fuck It We Ball. All rights reserved. Built by ballers, for ballers.</p>
+                </div>
+            </div>
+        </footer>
+    </div> <!-- End main-content -->
+
+    <script src="script.js"></script>
+</body>
+</html>
