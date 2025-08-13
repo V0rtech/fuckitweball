@@ -602,6 +602,22 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+.hero-logo-circle {
+    width: 120px;              /* adjust size */
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 1rem auto;   /* center & add space below */
+    border: 3px solid #fff;     /* white border around */
+    box-shadow: 0 0 20px rgba(255,255,255,0.3);
+}
+
+.hero-logo-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;         /* fills circle */
+    display: block;
+}
 
 /* Animations */
 @keyframes float {
